@@ -1,24 +1,27 @@
 {
-  "ticket_channel_id": 1510627283247828993,
+  "ticket_channel_id": 1510656168735805622,
   "ticket_category_id": 1510627232304074772,
   "support_role_ids": [
     1274716660036800614
   ],
   "ticket_options": [
     {
-      "label": "Application",
-      "description": "Apply for a team or rank",
-      "emoji": "📋"
+      "label": "Bewerbung",
+      "description": "Bewirb dich für ein Team oder einen Rang",
+      "emoji": "📋",
+      "question": ""
     },
     {
-      "label": "Bug",
-      "description": "Report a bug or issue",
-      "emoji": "🐛"
+      "label": "Fehler",
+      "description": "Melde einen Fehler oder ein Problem",
+      "emoji": "🐛",
+      "question": "Was denn"
     },
     {
-      "label": "General",
-      "description": "General support request",
-      "emoji": "💬"
+      "label": "Allgemein",
+      "description": "Allgemeine Support-Anfrage",
+      "emoji": "💬",
+      "question": ""
     }
   ]
 }

@@ -10,18 +10,23 @@ intents.message_content = True
 intents.guilds = True
 intents.members = True
 
-bot = commands.Bot(command_prefix="!", intents=intents)
+class TicketBot(commands.Bot):
+    async def setup_hook(self):
+        await self.load_extension("cogs.tickets")
+        try:
+            synced = await self.tree.sync()
+            print(f"{len(synced)} Slash-Command(s) synchronisiert")
+        except Exception as e:
+            print(f"Slash-Commands konnten nicht synchronisiert werden: {e}")
+
+
+bot = TicketBot(command_prefix="!", intents=intents)
 
 
 @bot.event
 async def on_ready():
-    print(f"Logged in as {bot.user} (ID: {bot.user.id})")
-    await bot.load_extension("cogs.tickets")
-    try:
-        synced = await bot.tree.sync()
-        print(f"Synced {len(synced)} slash command(s)")
-    except Exception as e:
-        print(f"Failed to sync commands: {e}")
+    await bot.change_presence(activity=discord.CustomActivity(name="🟢| Öffen für Tickets"))
+    print(f"Eingeloggt als {bot.user} (ID: {bot.user.id})")
 
 
-bot.run("")
+bot.run(os.getenv("DISCORD_TOKEN"))
