@@ -1,0 +1,24 @@
+{
+  "ticket_channel_id": 1510627283247828993,
+  "ticket_category_id": 1510627232304074772,
+  "support_role_ids": [
+    1274716660036800614
+  ],
+  "ticket_options": [
+    {
+      "label": "Application",
+      "description": "Apply for a team or rank",
+      "emoji": "📋"
+    },
+    {
+      "label": "Bug",
+      "description": "Report a bug or issue",
+      "emoji": "🐛"
+    },
+    {
+      "label": "General",
+      "description": "General support request",
+      "emoji": "💬"
+    }
+  ]
+}
